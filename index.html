@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Цветочный магазин</title>
+<meta name="author" content="Rohh Thone">
+<meta name="description" content="Цветочный магазин в котором можно купить цветок или букет. Доставка цветов доступна по Санкт-Петербургу и Ленинградской области.">
+<meta name="keywords" content="цветочный магазин, купить, цветок, букет, доставка, санкт-петербург, ленинградская область">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+*{padding: 0;margin: 0;}
+html{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 5vmin;width: 100%;}
+body{display: flex;align-items: center;justify-content: space-around;flex-direction: column;}
+article#first{height: 100vh;width: 100%;display: flex;flex-direction: column;}
+article#first{background-image: url(first.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;}
+article#first>div:first-child{width: 100%;height: 70vh;display: flex;align-items: center;justify-content: space-around;}
+article#first>div:first-child>h1{width: 100%;text-align: center;}
+article#first>div:last-child{width: 100%;height: 30%;display: flex;align-items: flex-start;justify-content: space-around;}
+article#first>div:last-child>form{display: flex;flex-direction: column;align-items: center;justify-content: center; text-align: center; height: 25vh;}
+article#first>div:last-child>form>input[type="tel"]{height: 10vmin; width: 60vw;border: none;  outline: none; font-size: 5vmin; background-color: transparent;}
+h1{font-size: 15vmin;}
+article#first>div:last-child>form>input[type="submit"]{height: 10vmin; width: 60vw;border: none; outline: none; font-size: 5vmin; background-color: black; color: white; border-bottom-left-radius: 5vmin;border-bottom-right-radius: 5vmin; text-align: center;}
+h1{font-size: 15vmin;}
+article#first>div:last-child>form>input::placeholder{color: rgba(0, 0, 0, 0.5);text-align: center;}
+article#second{height: auto;width: 90%;padding-bottom: 5vmin; display: flex;flex-wrap: wrap;justify-content: space-around;align-items: center;align-items: center;}
+article#second>form{width: 80vmin;height: auto;margin: 5vmin; background-color: black;display: flex;flex-direction: column;align-items: center;justify-content: space-around;padding: 3vmin; border-radius: 10vmin;padding-top: 0;padding-bottom: 0;}
+article#second>form>.image{width: 80vmin;height: 80vmin;background-position: center;background-repeat: no-repeat;background-size: cover; border-top-left-radius: 10vmin;border-top-right-radius: 10vmin;margin-top: 0.5vmin;}
+article#second>form>.name{border: none;outline: none;background-color: transparent;color: white;font-size: 7vmin; text-align: center;}
+article#second>form>div.cost{display: flex;}
+article#second>form>div>.fullcost{text-align: right;}
+article#second>form>div>.fullcost,article>form>div>.currency{font-size:7vmin;color: white;background-color: transparent;border: none;outline: none;}
+article#second>form>div>.fullcost::-webkit-outer-spin-div{-webkit-appearance: none;   margin: 0;}
+article#second>form>div.count{display: flex;justify-content: space-between; width: 80vmin; align-items: center;margin: 2.5vmin;}
+article#second>form>div>.itemcount{border: none;outline: none;background-color: transparent;color: white;font-size: 7vmin; text-align: center; width: 15vmin;}
+article#second>form>div>.itemcount::-webkit-outer-spin-div,article>form>div>.itemcount::-webkit-inner-spin-div {-webkit-appearance: none;   margin: 0;}
+article#second>form>div>div{border: none;outline: none;background-color: white; width: 20vmin; height: 20vmin; font-size: 10vmin; border-radius: 1vmin; display: flex;justify-content: space-around;align-items: center; cursor: pointer;-moz-user-select: none;-khtml-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;}
+article#second>form>input[type="submit"]{width: 80vmin; height: 15vmin; font-size: 7vmin;border: none;outline: none;background-color: white;color: black;border-radius: 0;margin-bottom: 0.5vmin; border-radius: 1vmin; border-bottom-left-radius: 10vmin; border-bottom-right-radius: 10vmin;}
+@media screen and (min-width: 60vh){
+article#second>form{width: 40vmin}
+article#second>form>.image{width: 40vmin;height: 40vmin;}
+article#second>form>.name{font-size: 5vmin;}
+article#second>form>div.cost{display: flex;}
+article#second>form>div>.fullcost{text-align: right;}
+article#second>form>div>.fullcost,article>form>div>.currency{font-size:4vmin;}
+article#second>form>div.count{width: 40vmin;}
+article#second>form>div>.itemcount{font-size: 5vmin; width: 15vmin;}
+article#second>form>div>.itemcount::-webkit-outer-spin-div,article>form>div>.itemcount::-webkit-inner-spin-div {-webkit-appearance: none;   margin: 0;}
+article#second>form>div>div{width: 10vmin; height: 10vmin; font-size: 10vmin;}
+article#second>form>input[type="submit"]{width: 40vmin; height: 10vmin; font-size: 5vmin;}
+}
+</style>
+<body>
+<article id="first">
+<div><h1>Цветочный магазин</h1></div>
+<div><form action="#" method="get"><input type="tel" name="phone" id="phone" placeholder="+0 (000) 000 - 00 - 00"><input type="submit" value="Мы позвоним"></form></div>
+</article>
+<article id="second">
+<form action="#" method="get"><div class="image" style="background-image: url(1.jpg);"></div><input type="number" name="id" hidden value="1"><input type="number" name="onecost" value="150" class="onecost" hidden><input type="text" name="name" class="name" value="Роза" readonly><div class="cost"><input type="number" name="cost" class="fullcost" value="" readonly><input type="text" name="currency" class="currency" value=" руб." readonly></div><div class="count"><div onclick="countMinus()"><svg width="100%" height="100%"><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /></svg></div><input onchange="fullCost()" type="number" name="count" class="itemcount" value="1" min="1" max="99"><div onclick="countPlus()"><svg width="100%" height="100%"><line x1="50%" y1="10%" x2="50%" y2="90%" style="stroke:rgb(0,0,0);stroke-width:10" /><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /> </svg></div></div><input type="submit" value="Купить"></form>
+<form action="#" method="get"><div class="image" style="background-image: url(1.jpg);"></div><input type="number" name="id" hidden value="1"><input type="number" name="onecost" value="150" class="onecost" hidden><input type="text" name="name" class="name" value="Роза" readonly><div class="cost"><input type="number" name="cost" class="fullcost" value="" readonly><input type="text" name="currency" class="currency" value=" руб." readonly></div><div class="count"><div onclick="countMinus()"><svg width="100%" height="100%"><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /></svg></div><input onchange="fullCost()" type="number" name="count" class="itemcount" value="1" min="1" max="99"><div onclick="countPlus()"><svg width="100%" height="100%"><line x1="50%" y1="10%" x2="50%" y2="90%" style="stroke:rgb(0,0,0);stroke-width:10" /><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /> </svg></div></div><input type="submit" value="Купить"></form>
+<form action="#" method="get"><div class="image" style="background-image: url(1.jpg);"></div><input type="number" name="id" hidden value="1"><input type="number" name="onecost" value="150" class="onecost" hidden><input type="text" name="name" class="name" value="Роза" readonly><div class="cost"><input type="number" name="cost" class="fullcost" value="" readonly><input type="text" name="currency" class="currency" value=" руб." readonly></div><div class="count"><div onclick="countMinus()"><svg width="100%" height="100%"><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /></svg></div><input onchange="fullCost()" type="number" name="count" class="itemcount" value="1" min="1" max="99"><div onclick="countPlus()"><svg width="100%" height="100%"><line x1="50%" y1="10%" x2="50%" y2="90%" style="stroke:rgb(0,0,0);stroke-width:10" /><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /> </svg></div></div><input type="submit" value="Купить"></form>
+<form action="#" method="get"><div class="image" style="background-image: url(1.jpg);"></div><input type="number" name="id" hidden value="1"><input type="number" name="onecost" value="150" class="onecost" hidden><input type="text" name="name" class="name" value="Роза" readonly><div class="cost"><input type="number" name="cost" class="fullcost" value="" readonly><input type="text" name="currency" class="currency" value=" руб." readonly></div><div class="count"><div onclick="countMinus()"><svg width="100%" height="100%"><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /></svg></div><input onchange="fullCost()" type="number" name="count" class="itemcount" value="1" min="1" max="99"><div onclick="countPlus()"><svg width="100%" height="100%"><line x1="50%" y1="10%" x2="50%" y2="90%" style="stroke:rgb(0,0,0);stroke-width:10" /><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /> </svg></div></div><input type="submit" value="Купить"></form>
+<form action="#" method="get"><div class="image" style="background-image: url(1.jpg);"></div><input type="number" name="id" hidden value="1"><input type="number" name="onecost" value="150" class="onecost" hidden><input type="text" name="name" class="name" value="Роза" readonly><div class="cost"><input type="number" name="cost" class="fullcost" value="" readonly><input type="text" name="currency" class="currency" value=" руб." readonly></div><div class="count"><div onclick="countMinus()"><svg width="100%" height="100%"><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /></svg></div><input onchange="fullCost()" type="number" name="count" class="itemcount" value="1" min="1" max="99"><div onclick="countPlus()"><svg width="100%" height="100%"><line x1="50%" y1="10%" x2="50%" y2="90%" style="stroke:rgb(0,0,0);stroke-width:10" /><line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgb(0,0,0);stroke-width:10" /> </svg></div></div><input type="submit" value="Купить"></form>
+</article>
+<article id="third">
+<section><h2>О нас</h2><p></p></section>
+<section></section>
+</article>
+</body>
+<script>
+document.addEventListener("load",fullCost());
+function countMinus(e){var elem=e ? e.target : window.event.srcElement;if(elem.parentNode==elem.parentNode.parentNode.getElementsByTagName('svg')[0]){elem=elem.parentNode.parentNode}else{elem=elem.parentNode};var val=elem.parentNode.getElementsByTagName('input')[0];if(val.value==1){}else{val.value=parseInt(val.value)-1;elem.parentNode.parentNode.getElementsByClassName('fullcost')[0].value=elem.parentNode.parentNode.getElementsByClassName('onecost')[0].value*elem.parentNode.getElementsByTagName('input')[0].value}}
+function countPlus(e){var elem=e ? e.target : window.event.srcElement;if(elem.parentNode==elem.parentNode.parentNode.getElementsByTagName('svg')[0]){elem=elem.parentNode.parentNode}else{elem=elem.parentNode};var val=elem.parentNode.getElementsByTagName('input')[0];if(val.value==99){}else{val.value=parseInt(val.value)+1;elem.parentNode.parentNode.getElementsByClassName('fullcost')[0].value=elem.parentNode.parentNode.getElementsByClassName('onecost')[0].value*elem.parentNode.getElementsByTagName('input')[0].value}}
+function fullCost(){for(let i=0;i<document.getElementsByClassName('onecost').length;i++){let el=document.getElementsByClassName('onecost')[i];document.getElementsByClassName('fullcost')[i].value=el.value*document.getElementsByClassName('itemcount')[i].value;}}
+</script>
+</html>
